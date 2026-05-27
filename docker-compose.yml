@@ -1,6 +1,6 @@
 services:
   front-despacho:
-    build: .
+    image: migutrujillo/front-despacho:latest
     container_name: front-despacho
     restart: always
     ports:
