@@ -21,11 +21,11 @@ jobs:
 
       - name: Construir imagen Docker
         run: |
-          docker build -t TU_USUARIO_DOCKERHUB/front-despacho:latest .
+          docker build -t migutrujillo/front-despacho:latest .
 
       - name: Publicar imagen en Docker Hub
         run: |
-          docker push TU_USUARIO_DOCKERHUB/front-despacho:latest
+          docker push migutrujillo/front-despacho:latest
 
       - name: Desplegar en EC2 Frontend
         uses: appleboy/ssh-action@v1.0.3
