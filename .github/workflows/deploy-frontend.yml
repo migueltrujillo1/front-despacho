@@ -21,7 +21,7 @@ jobs:
 
       - name: Construir imagen Docker
         run: |
-          docker build -t migutrujillo/front-despacho:latest .
+          docker build --no-cache -t migutrujillo/front-despacho:latest .
 
       - name: Publicar imagen en Docker Hub
         run: |
@@ -38,5 +38,5 @@ jobs:
             git pull origin deploy
             docker compose down
             docker compose pull
-            docker compose up -d
+            docker compose up -d --force-recreate
             docker image prune -f
