@@ -5,6 +5,7 @@ on:
     branches:
       - ep3-eks
     paths:
+      - "index.html"
       - "src/**"
       - "public/**"
       - "package.json"
