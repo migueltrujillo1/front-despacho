@@ -3,8 +3,10 @@ name: Despliegue Frontend a EKS
 on:
   push:
     branches:
+      - main
       - ep3-eks
     paths:
+      - "index.html"
       - "src/**"
       - "public/**"
       - "package.json"
@@ -62,7 +64,7 @@ jobs:
 
       - name: Esperar despliegue correcto del frontend
         run: |
-          kubectl rollout status deployment/frontend -n $NAMESPACE --timeout=180s
+          kubectl rollout status deployment/frontend -n $NAMESPACE --timeout=600s
 
       - name: Mostrar estado final del frontend
         run: |
